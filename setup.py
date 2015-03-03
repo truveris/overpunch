@@ -19,5 +19,12 @@ setup(
     url="http://github.com/truveris/overpunch",
     test_suite="nose.collector",
     packages=find_packages(exclude=["ez_setup"]),
+    classifiers=[
+        "Intended Audience :: Healthcare Industry",
+        "Development Status :: 5 - Production/Stable",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 2.7",
+        "Topic :: Text Processing",
+    ],
 )
 
