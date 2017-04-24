@@ -1,4 +1,4 @@
-# Copyright 2015, Truveris Inc.
+# Copyright 2015-2017, Truveris Inc. All Rights Reserved.
 
 """
 Extract and generate overpunch formatted numbers.
@@ -8,7 +8,7 @@ from decimal import Decimal, ROUND_HALF_UP
 
 
 __copyright__ = "(c) 2015 Truveris"
-__version__ = "1.0"
+__version__ = "1.1"
 
 
 EXTRACT_REF = {
@@ -48,7 +48,7 @@ EXTRACT_REF = {
 def extract(raw, decimals=2):
     """Extract a number in the overpunch format to a Decimal object.
 
-    :param raw: The formmated value.
+    :param raw: The formatted value.
     :param decimals: The implied decimal precision of this number (default: 2).
 
     """
@@ -96,7 +96,7 @@ def format(val, decimals=2, rounding=ROUND_HALF_UP):
     :param decimals: How many decimals are implied in the formatted value
         (default: 2).
     :param rounding: When rounding a value during quantization, how that value
-        is to be rounded. Approrpiate values are the rounding constants from
+        is to be rounded. Appropriate values are the rounding constants from
         the ``decimal`` library (default: ROUND_HALF_UP).
 
     """
@@ -134,4 +134,3 @@ def format(val, decimals=2, rounding=ROUND_HALF_UP):
     parts[-1] = FORMAT_REF[(sign, parts[-1])]
 
     return "".join(parts)
-

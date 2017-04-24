@@ -1,4 +1,4 @@
-# Copyright 2015, Truveris Inc.
+# Copyright 2015-2017, Truveris Inc. All Rights Reserved.
 
 import sys
 import random
@@ -66,7 +66,7 @@ class TestCase(unittest.TestCase):
 
     def test_nan_raises(self):
         d = Decimal("NaN")
-        with self.assertRaises(ValueError) as cm:
+        with self.assertRaises(ValueError):
             overpunch.format(d)
 
     def test_format_integer(self):
@@ -75,9 +75,8 @@ class TestCase(unittest.TestCase):
 
     def test_random(self):
         for i in range(1000):
-            d = Decimal(random.randint(0, sys.maxint)) / 100
+            d = Decimal(random.randint(0, sys.maxsize)) / 100
             if random.random() > 0.5:
                 d = -d
 
             self.assertEquals(overpunch.extract(overpunch.format(d)), d)
-

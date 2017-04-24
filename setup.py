@@ -1,4 +1,4 @@
-# Copyright 2015, Truveris Inc.
+# Copyright 2015-2017, Truveris Inc. All Rights Reserved.
 
 try:
     from setuptools import setup, find_packages
@@ -24,6 +24,7 @@ setup(
         "Development Status :: 5 - Production/Stable",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3",
         "Topic :: Text Processing",
     ],
 )
