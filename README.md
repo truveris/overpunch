@@ -13,7 +13,7 @@ Decimal('123.45')
 ```
 
 ## Requirements:
-* Python 2.7+
+* Python 2.7+ or Python 3
 
 ## Tests:
 Without coverage:
