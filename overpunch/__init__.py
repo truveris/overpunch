@@ -53,6 +53,8 @@ def extract(raw, decimals=2):
 
     """
 
+    raw = raw.zfill(decimals)
+
     length = len(raw)
     last_char = raw[length - 1]
     (sign, cent) = EXTRACT_REF[last_char]
