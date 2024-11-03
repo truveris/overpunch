@@ -26,6 +26,10 @@ class TestCase(unittest.TestCase):
         d = Decimal("-12.3450")
         self.assertEquals(overpunch.extract("12345}", decimals=4), d)
 
+    def test_extract_4_decimal_unpadded(self):
+        d = Decimal("0.0005")
+        self.assertEquals(overpunch.extract("N", decimals=4), d)
+
     def test_extract_0_decimal_negative(self):
         d = Decimal("-123450")
         self.assertEquals(overpunch.extract("12345}", decimals=0), d)
